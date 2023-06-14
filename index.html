@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- alpine js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link rel="stylesheet" href="./css/output.css" />
+    <title>talktolisa</title>
+  </head>
+  <body class="relative">
+    <header class="bg-primary w-full h-full">
+      <div class="container w-full m-auto py-1 px-4">
+        <p class="text-center lg:text-left text-whitetext text-base xl:text-lg">
+          talktolisa.com
+        </p>
+      </div>
+      <div class="bg-gray-400 h-[1.5px] w-full"></div>
+    </header>
+    <main class="bg-primary w-full h-full">
+      <div
+        class="lg:flex lg:justify-between container m-auto px-6 py-7 xl:py-10"
+      >
+        <div class="text-center lg:text-left flex-[60%] relative">
+          <h1 class="font-inter text-whitetext text-2xl xl:text-4xl font-[400]">
+            Meet Lisa: your <br />
+            supportive AI assistant
+          </h1>
+          <div class="bg-yellow mt-4 xl:mt-6 h-2 w-9 hidden lg:block"></div>
+          <p
+            class="font-inter text-whitetext text-base xl:text-xl font-light pt-4 xl:pt-6 px-12 lg:px-0"
+          >
+            Deligate all your personal tasks to Lisa,
+            <br class="hidden lg:block" />
+            your AI assistant
+          </p>
+          <p class="font-inter text-whitetext text-base xl:text-xl font-light">
+            Try for free.
+          </p>
+          <a href="#_" class="relative inline-block text-lg group mt-4 w-[75%] lg:w-[30%]">
+            <span class="relative z-10 block px-7 py-2 overflow-hidden font-medium leading-tight text-blacktext transition-colors duration-300 ease-out border-2 border-blacktext rounded-lg ">
+            <span class="absolute inset-0 w-full h-full px-7 py-2 rounded-lg bg-blue"></span>
+            <span class="relative font-inter font-[700] text-base"> Get Early Access</span>
+            </span>
+            <span class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-blacktext rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+            </a>
+        </div>
+        <div class="w-full h-[40vh] pt-7 xl:pt-0 flex-[40%]">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/D0UnqGm_miA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="bg-gray-400 h-[1.5px] w-full"></div>
+
+      <div
+        class="w-full container m-auto px-4 flex justify-center items-center"
+      >
+      <!-- faq -->
+        <div class="w-[90%] lg:w-[60%] pt-8 pb-44 mb-12 xl:mb-0">
+          <h1 class="text-center font-inter text-4xl text-whitetext">
+            Frequently Asked Questions
+          </h1>
+          <div class="pt-8" x-data="{selected:null}">
+            <ul class="shadow-box text-whitetext font-inter">
+              <li class="relative border-b border-gray-400">
+                <button
+                  type="button"
+                  class="w-full px-4 py-6 text-left"
+                  @click="selected !== 1 ? selected = 1 : selected = null"
+                >
+                  <div class="flex items-center justify-between">
+                    <span> How does a virtual assistant work? </span>
+                    <span class="ico-plus"></span>
+                  </div>
+                </button>
+
+                <div
+                  class="relative overflow-hidden transition-all max-h-0 duration-700"
+                  style=""
+                  x-ref="container1"
+                  x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+                >
+                  <div class="pb-6 px-4">
+                    <p>
+                      A virtual assistant uses natural language processing (NLP)
+                      and machine learning algorithms to understand user input
+                      and respond accordingly. It leverages a vast database of
+                      information to provide accurate and relevant answers to
+                      queries.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="relative border-b border-gray-400">
+                <button
+                  type="button"
+                  class="w-full px-4 py-6 text-left"
+                  @click="selected !== 2 ? selected = 2 : selected = null"
+                >
+                  <div class="flex items-center justify-between">
+                    <span> What can I use a virtual assistant for?</span>
+                    <span class="ico-plus"></span>
+                  </div>
+                </button>
+
+                <div
+                  class="relative overflow-hidden transition-all max-h-0 duration-700"
+                  style=""
+                  x-ref="container2"
+                  x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+                >
+                  <div class="p-6">
+                    <p>
+                      A virtual assistant can help you with a wide range of
+                      tasks such as checking the weather, setting reminders,
+                      scheduling appointments, searching the web, playing music,
+                      sending messages, and much more. It can also integrate
+                      with other smart devices to control your home automation
+                      system.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="relative border-b border-gray-400">
+                <button
+                  type="button"
+                  class="w-full px-4 py-6 text-left"
+                  @click="selected !== 3 ? selected = 3 : selected = null"
+                >
+                  <div class="flex items-center justify-between">
+                    <span> How secure is the virtual assistant? </span>
+                    <span class="ico-plus"></span>
+                  </div>
+                </button>
+
+                <div
+                  class="relative overflow-hidden transition-all max-h-0 duration-700"
+                  style=""
+                  x-ref="container3"
+                  x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+                >
+                  <div class="pb-6 px-4">
+                    <p>
+                      We prioritize the security and privacy of our users. Our
+                      virtual assistant employs advanced encryption techniques
+                      to safeguard personal information and ensures that all
+                      data transmission is secure. We adhere to strict privacy
+                      policies and do not sell or share user data with third
+                      parties.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="relative border-b border-gray-400">
+                <button
+                  type="button"
+                  class="w-full px-4 py-6 text-left"
+                  @click="selected !== 4 ? selected = 4 : selected = null"
+                >
+                  <div class="flex items-center justify-between">
+                    <span> Where can I access the bot?</span>
+                    <span class="ico-plus"></span>
+                  </div>
+                </button>
+
+                <div
+                  class="relative overflow-hidden transition-all max-h-0 duration-700"
+                  style=""
+                  x-ref="container4"
+                  x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
+                >
+                  <div class="pb-6 px-4">
+                    <p>
+                      Currently, the bot is available only on Telegram. You need
+                      to have the Telegram Android/iOS/Desktop/macOS app
+                      installed. You can also use the web app. After installing,
+                      search for “@TalktoLisa_Bot” in the search bar and start
+                      chatting!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="relative border-b border-gray-400">
+                <button
+                  type="button"
+                  class="w-full px-4 py-6 text-left"
+                  @click="selected !== 5 ? selected = 5 : selected = null"
+                >
+                  <div class="flex items-center justify-between">
+                    <span> Can I customize the virtual assistant?</span>
+                    <span class="ico-plus"></span>
+                  </div>
+                </button>
+
+                <div
+                  class="relative overflow-hidden transition-all max-h-0 duration-700"
+                  style=""
+                  x-ref="container5"
+                  x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
+                >
+                  <div class="pb-6 px-4">
+                    <p>
+                      Yes, our virtual assistant is designed to adapt to your
+                      preferences. You can customize its name, voice, and
+                      language settings to create a more personalized
+                      experience. Additionally, you can set up personalized
+                      routines, shortcuts, and preferences to streamline your
+                      interactions.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="relative border-b border-gray-400">
+                <button
+                  type="button"
+                  class="w-full px-4 py-6 text-left"
+                  @click="selected !== 6 ? selected = 6 : selected = null"
+                >
+                  <div class="flex items-center justify-between">
+                    <span> What’s your vision for the product?</span>
+                    <span class="ico-plus"></span>
+                  </div>
+                </button>
+
+                <div
+                  class="relative overflow-hidden transition-all max-h-0 duration-700"
+                  style=""
+                  x-ref="container6"
+                  x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''"
+                >
+                  <div class="pb-6 px-4">
+                    <p>
+                      Our vision with the product is to help people only do
+                      high-impact, high-leverage tasks. They should leave out
+                      other tasks to virtual assistants
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="relative">
+                <button
+                  type="button"
+                  class="w-full px-4 py-6 text-left"
+                  @click="selected !== 7 ? selected = 7 : selected = null"
+                >
+                  <div class="flex items-center justify-between">
+                    <span> Who's the team behind talktolisa.com?</span>
+                    <span class="ico-plus"></span>
+                  </div>
+                </button>
+
+                <div
+                  class="relative overflow-hidden transition-all max-h-0 duration-700"
+                  style=""
+                  x-ref="container7"
+                  x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''"
+                >
+                  <div class="pb-6 px-4">
+                    <p>It's currently a 2-person team. Say hi to us.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="absolute bottom-0 border-t border-gray-400  w-full">
+<div class="container  m-auto px-4 lg:px-4 flex flex-col lg:flex-row items-center justify-between  pt-6 pb-16 lg:py-6 gap-1 text-whitetext font-inter text-sm xl:text-md">
+<p class="text-center">Copyright 2023 Lisa Inc, <br class="lg:hidden"> All rights reserved</p>
+<div class="flex flex-col lg:flex-row justify-between items-center lg:gap-4 gap-1 pt-2 lg:pt-0">
+  <a href="" class="underline-offset-2 underline">Terms of service</a>
+  <a href="" class="underline-offset-2 underline">Privacy policy</a>
+</div>
+</div>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
